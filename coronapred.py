@@ -64,10 +64,10 @@
     plt.scatter(x11,regressor.predict(x11),color='red')
     plt.title('corona prediction')
     plt.xlabel('date')
-    plt.ylabel('corona_effected')
+    plt.ylabel('corona_death')
     plt.show()
-    ans=pol_reg.predict(poly_reg.fit_transform(x11))
-    print('total death -->")
+    ans=regressor.predict(x11)
+    #print('total death -->")
     print(ans)
     
     #29-03-2020
