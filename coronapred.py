@@ -20,7 +20,7 @@
     from sklearn.ensemble import RandomForestRegressor 
     
    #importing dataset 
-    df=pd.read_csv('time_series_covid_19_deaths.csv')
+    df=pd.read_csv('Time.csv')
     
    #formating the raw data into good shape
     df['date'] = pd.to_datetime(df['date'])
@@ -30,7 +30,7 @@
     
     x=np.array(df['date'])
     x = x.reshape(-1, 1)
-    y=np.array(df['death'])
+    y=np.array(df['confirmed'])
     y=y.reshape(-1,1)
    
     
@@ -64,10 +64,10 @@
     plt.scatter(x11,regressor.predict(x11),color='red')
     plt.title('corona prediction')
     plt.xlabel('date')
-    plt.ylabel('corona_death')
+    plt.ylabel('confirmed')
     plt.show()
     ans=regressor.predict(x11)
     #print('total death -->")
-    print(ans)
+    print('range from'+ str(ans-100) + 'including' + str(ans) + 'to ' + str(ans+100))
     
     #29-03-2020
