@@ -47,7 +47,7 @@
    
     #random forest regression
     
-    regressor = RandomForestRegressor(n_estimators = 100, random_state = 0) 
+    regressor = RandomForestRegressor(n_estimators = 10000, random_state = 0) 
     regressor.fit(x_train, y_train)  
     
   #  model1 = xgboost.XGBClassifier()
